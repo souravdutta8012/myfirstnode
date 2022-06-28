@@ -18,11 +18,11 @@ app.get("/list_movies", (req, res) => {
         },
         {
             "id": 3,
-            "title": "Fifty shades of Grey"
+            "title": "Titanic"
         },
         {
             "id": 4,
-            "title": "Fifty shades of Grey"
+            "title": "Mr.Bean"
         }
     ]
     res.send(data);
