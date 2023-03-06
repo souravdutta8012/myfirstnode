@@ -1,6 +1,10 @@
-const express = require('express')
-const app = express()
-const port = 3000
+const express = require('express');
+const cors = require('cors');
+const app = express();
+const port = 3000;
+
+app.use(express.json());
+app.use(cors());
 
 app.get('/', (req, res) => {
     res.end('Api Gateway is healthy: 200')
@@ -26,6 +30,12 @@ app.get("/list_movies", (req, res) => {
         }
     ]
     res.send(data);
+});
+
+app.post('/user', (req, res) => {
+    let body = req.body;
+    console.log(body);
+    res.send(body);
 });
 
 app.listen(port, () => {
